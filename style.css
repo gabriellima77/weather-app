@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --text: #E4E3E3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(35deg, #84A9AC 30%, #4e7579 60%,#215257 90%);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  padding-left: 20px;
+  width: max-content;
+  height: 100%;
+}
+
+.change {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--text);
+  text-shadow: 2px 1px 2px #204051;
+  border: none;
+  background-image: linear-gradient(130deg,#6e8e91 30%, #3B6978 80%, #204051 100%);
+}
+
+.change:hover {
+  background-image: linear-gradient(130deg,#637f81 30%, #294953 80%, #204051 100%);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  height: 100%;
+}
+
+.search {
+  width: 40%;
+  height: 60%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: #637f81;
+  font-weight: 600;
+  text-align: center;
+}
+
+.search::placeholder {
+  font-size: 1rem;
+  color: #84A9AC;
+}
+
+.submit {
+  cursor: pointer;
+  margin-right: 10px;
+  width: 80px;
+  height: 60%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  background-color: #3c6d7c;
+  color: var(--text);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.card {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 80vh;
+  color: var(--text); 
+  text-shadow: 1px 1px 1px #294953;
+  margin-left: 10%;
+}
+
+.name {
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.day {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.temp {
+  margin: 15px 0px 5px 0px;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+}
+
+.temp-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.small-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.medium-text {
+  height: 60px;
+  font-size: 1.5rem;
+}
+
+.small-text {
+  font-size: 1.2rem;
+}
+
+.small-box  img{
+  border: none;
+  margin-bottom: 10px;
+}
+
+.side {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 80vh;
+  color: var(--text); 
+  text-shadow: 1px 1px 1px #294953;
+}
+
+.desc {
+  margin-top: 10vh;
+  font-size: 1.8rem;
+}
+
+.wind {
+  margin-top: 20vh;
+  margin-left: 50%;
+  font-size: 1.8rem;
+}
+
+.humidity {
+  margin-top: 20vh;
+  margin-left: 10%;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.loading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  animation: load 2s ease-in-out 0s infinite forwards;
+}
+
+.loading.disabled {
+  display: none;
+}
+
+@keyframes load {
+  0% {
+    border-top: 10px solid rgba(0, 0, 255, 0.5);
+    border-bottom: 10px solid blue;
+    border-right: 10px solid blue;
+    border-left: 10px solid blue;
+  }
+  50% {
+    border-top: 10px solid rgba(0, 0, 255, 0.5);
+    border-bottom: 10px solid blue;
+    border-right: 10px solid blue;
+    border-left: 10px solid blue;
+    transform: rotate(180deg);
+  }
+  100% {
+    border-top: 10px solid rgba(0, 0, 255, 0.5);
+    border-bottom: 10px solid blue;
+    border-right: 10px solid blue;
+    border-left: 10px solid blue;
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1440px) {
+  * {
+    font-size: 18px;
+  }
+
+  .change {
+    width: 200px;
+    height: 80px;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  * {
+    font-size: 12px;
+  }
+} 
+
+@media (max-width: 768px) {
+  * {
+    font-size: 8px;
+  }
+}
