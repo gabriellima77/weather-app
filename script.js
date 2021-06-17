@@ -35,9 +35,11 @@ window.onload = ()=> {
       loading.classList.add('disabled');
     } catch(err) {
       console.log(err);
+      loading.classList.add('disabled');
     }
 
   });
+
 
   function putContent(data) {
     const card = createCard(data);
